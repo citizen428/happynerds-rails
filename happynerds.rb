@@ -8,7 +8,7 @@ require 'mongo'
 set :root, APP_ROOT
 
 get '/' do
-  "Hell, world!"
+  "Hello, world!"
 end
 
 
