@@ -9,11 +9,9 @@ set :root, APP_ROOT
 
 include Mongo
 
-@db = Connection.new(ENV['DATABASE_URL'] || 'localhost').db('happynerds')
+@db = Connection.new(ENV['DATABASE_URL']).db('happynerds')
 if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
   auth = @db.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
-else
-  auth = @db.authenticate('happynerds', 'h4ppyn3rds+')
 end
 
 configure :production do
