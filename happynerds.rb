@@ -7,9 +7,32 @@ require 'mongo'
 
 set :root, APP_ROOT
 
-get '/' do
-  "Hello, world!"
+include Mongo
+
+@db = Connection.new(ENV['DATABASE_URL'] || 'localhost').db('happynerds')
+if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
+  auth = @db.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
+else
+  auth = @db.authenticate('happynerds', 'h4ppyn3rds+')
 end
 
+configure :production do
+  enable :raise_errors
+end
+
+get '/' do
+  @sites = @db['sites']
+  haml :index
+end
+
+get '/add' do
+end
+
+post '/add' do
+end
+
+get '/*' do
+  redirect '/'
+end
 
 
