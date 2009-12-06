@@ -1,0 +1,5 @@
+%h1 #{@os.capitalize }
+  
+- @sites.find( { 'tags' => @os } ).sort_by{|s| s['desc']}.each do |site|
+  %a{:href => site['href']} #{site['desc']}
+  %br/

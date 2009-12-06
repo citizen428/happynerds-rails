@@ -23,10 +23,11 @@ get '/' do
   haml :index
 end
 
-get '/add' do
-end
-
-post '/add' do
+get '/view/:os' do
+  redirect '/' unless %(linux mac windows).include? params[:os]
+  @sites = db['sites']
+  @os = params[:os]
+  haml :os
 end
 
 get '/*' do
