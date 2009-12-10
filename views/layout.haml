@@ -1,10 +1,38 @@
+!!! 
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
   %head
     %title Happy Nerds - Programming Links for Kids
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "Description", :content => "Information and links regarding teaching programming to children."}
+        
+    %meta{:name => "Keywords", :content => "children, kid, programming, coding, tutorials, agentsheets, alice, phrogram, robomind, sgp, scratch, simple, squeak, etoys, toontalk, logo, robomind" }
+    
+    %link{:href => "/css/style.css", :rel => "stylesheet", :type => "text/css"}
   %body
-    %a{:href => '/'} Home
-    %a{:href => '/view/windows'} Windows
-    %a{:href => '/view/mac'} Mac
-    %a{:href => '/view/linux'} Linux
-    = yield
+    %div{:id => "HEADER"}
+      %h1 Happy Nerds
+      %ul 
+        %li 
+          %a{:href => '/view/linux'} Linux  
+        %li 
+          %a{:href => '/view/mac'} Mac
+        %li 
+          %a{:href => '/view/windows'} Windows      
+        %li 
+          %a{:href => '/'} Home
+      .Visual    
+    %div{:id => "CONTENT"}
+      %div{:id => "TEXT"}
+        = yield
+      
+    %div{:id => "FOOTER"}
+      %p
+        &copy; 
+        %a{:href => "http://citizen428.net"} Michael Kohl 
+        2009
+      %p
+        Original CSS by
+        %a{:href => "http://www.gettemplate.com"} GetTemplate.com
+  
+    
+    
