@@ -54,14 +54,16 @@ h2 {
     letter-spacing: .005em; 
     color: White; 
     font-size: 15pt; 
+    text-align: justify;
 }
 
 #TEXT { 
-padding: 35px 40px 35px 40px; 
-border-bottom: 1px solid #484848; 
-border-top: 1px solid #484848; 
-background-color: #222222; }
-#TEXT p { margin-bottom: 1em; }
+    padding: 35px 40px 35px 40px; 
+    border-bottom: 1px solid #484848; 
+    border-top: 1px solid #484848; 
+    background-color: #222222; 
+}
+#TEXT p { margin-bottom: 1em; text-align: justify; }
 
 #FOOTER {
     width:760px; 
