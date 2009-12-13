@@ -19,14 +19,15 @@ configure :production do
 end
 
 get '/' do
+  @page = "Test"
   @sites = db['sites']
   haml :index
 end
 
 get '/view/:os' do
+  @page = params[:os]
   redirect '/' unless %(linux mac windows).include? params[:os]
   @sites = db['sites']
-  @os = params[:os]
   haml :os
 end
 
