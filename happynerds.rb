@@ -19,7 +19,7 @@ configure :production do
 end
 
 get '/' do
-  @page = "Test"
+  @page = "Programming for kids?"
   @sites = db['sites']
   haml :index
 end
