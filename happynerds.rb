@@ -9,7 +9,7 @@ set :root, APP_ROOT
 
 include Mongo
 
-db = Connection.new(ENV['DATABASE_URL']).db('happynerds')
+db = Connection.new(ENV['DATABASE_URL'], ENV['DATABASE_PORT']).db('happynerds')
 if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
   auth = db.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
 end
