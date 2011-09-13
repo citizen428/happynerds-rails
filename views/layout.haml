@@ -27,6 +27,7 @@
     %div{:id => "CONTENT"}
       %div{:id => "TEXT"}
         %h2 #{@page.capitalize}
+        %img{ :id => "illustration", :src => "/img/schneidersitz.png", :alt => "Schneidersitz"}
         = yield
 
     %div{:id => "FOOTER"}
