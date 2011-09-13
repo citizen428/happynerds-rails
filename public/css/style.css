@@ -1,92 +1,330 @@
-/* STANDARD TAG REDEFINITIONS */
-BODY { 
-	color: White; 
-	font-family: Arial, Helvetica, sans-serif; 
-	font-size: 10pt; 
-	background-color: #A64A00; 
-	margin: 0; 
-	padding: 0; 
-}
-p { font-size: 10pt; margin-bottom: 7px; margin-top: 0; }
-a { color: #FFb173; text-decoration: none; }
-a:hover{ text-decoration: underline; color: White; }
+/*  Less Framework 4
+  http://lessframework.com
+  by Joni Korpi
+  License: http://opensource.org/licenses/mit-license.php */
 
-#HEADER { width: 760px; margin-left: auto; margin-right: auto;}
-#HEADER ul { 
-	margin: 0; 
-	padding-left: 0; 
-	height: 44px; 
-	line-height: 44px; 
-	display: block; 
-	list-style: none; 
-	background-color: #FF7100;
-}
-#HEADER li { display: inline; background-color: #BF6730; float: right; }
-#HEADER li a { 
-	height: 44px; 
-	line-height: 44px; 
-	display: block; 
-	font-weight: bold;
-	padding-left: 27px; 
-	padding-right: 27px; 
-	border-left: 1px solid #A64A00; 
-	float: left;
-}
-#HEADER li a:hover { background-color: #FFBE40; text-decoration: none; }
-#HEADER .Visual { 
-	height:55px; 
-	font-weight: bold;
-	background-repeat: no-repeat;  
-	background-color: #FFCF73;  
-	border-top: 3px solid #A64A00;   
-}
-h1 { 
-	margin: 0; 
-	padding: 40px 0 0 0; 
-	font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; 
-	font-weight: normal; 
-	letter-spacing: .005em; 
-	color: White;  
-	font-size: 20pt;
+
+/*  Resets
+  ------  */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-#CONTENT { width:760px; margin-left:auto; margin-right:auto; }
-h2 { 
-	margin: 0; 
-	padding-bottom: 25px;
-	font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; 
-	font-weight: bold; 
-	letter-spacing: .005em; 
-	color: White; 
-	font-size: 15pt; 
-	text-align: justify;
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+  display: block;
 }
 
-#TEXT { 
-	padding: 35px 40px 35px 40px; 
-	border-top: 2px solid #A64A00;
-	background-color: #FF9540; 
-}
-#TEXT p { margin-bottom: 1em; text-align: justify; }
-#TEXT a { color: #A40004; text-decoration: none; letter-spacing: .005em; }
-#TEXT a:hover { text-decoration: underline; }
+a img {border: 0;}
 
+/*  Typography presets
+  ------------------  */
+
+.gigantic {
+  font-size: 110px;
+  line-height: 120px;
+  letter-spacing: -2px;
+}
+
+.huge, h1 {
+  font-size: 68px;
+  line-height: 72px;
+  letter-spacing: -1px;
+}
+
+.large, h2 {
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.bigger, h3 {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.big, h4 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+body {
+  font: 16px/24px Georgia, serif;
+}
+
+.small, small {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/*    Default Layout: 992px. 
+    Gutters: 24px.
+    Outer margins: 48px.
+    Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+
+body {
+  font: normal normal normal 1em/1.5em 'Georgia', sans-serif;
+  background: #FFF url('/img/noise.png') top left repeat;
+  margin: 0 auto;
+}
+
+a {
+  color: #FF7100;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+a:active {
+  text-decoration: none;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+a:visited {
+  color: #C45501;
+}
+
+p {
+  margin-bottom: 24px;
+  color: #666;
+}
+
+#CONTENT h1, #CONTENT h2, #CONTENT h3, #CONTENT h4 {
+  font-weight: normal;
+  margin-bottom: .45em;
+}
+
+#CONTENT a {
+  font-family: 'Inconsolata', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-size: 24px;
+  line-height: 2em;
+}
+
+body {
+  width: 896px;
+  padding: 24px 48px 84px;
+  color: rgb(60,60,60);
+  -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+#CONTENT {
+  width: 528px;
+  padding-left: 252px;
+}
+
+#HEADER {
+  height: 50px;
+  width: 160px;
+  font-family: 'Inconsolata', sans-serif;
+  clear: both;
+  position: relative;
+}
+
+#illustration {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+#HEADER h1 {
+  float: left;
+}
+
+#HEADER a {
+  color: #333;
+  text-decoration: none;
+}
+
+#HEADER a:hover {
+  text-decoration: underline;
+}
+
+#HEADER a:active {
+  text-decoration: none;
+}
+
+#HEADER ul {
+  width: 160px;
+  position: absolute;
+  top: 180px;
+  left: 48px;
+  text-indent: 0;
+}
+
+#HEADER ul li {
+  font-size: 18px;
+  line-height: 2em;
+  list-style-type: none;
+  text-align: left;
+}
 
 #FOOTER {
-	width:760px; 
-	margin-top:27px; 
-	margin-left:auto; 
-	margin-right:auto;  
-	border-top: 4px solid #FFCF73;  
-	text-align: center;  
-	padding-top: 5px;   
+  border-top: 1px solid #f0f0f0;
+  margin-top: 88px;
+  padding-top: 22px;
+  color: #666;
 }
-#FOOTER p { font-size: 11px; line-height: 14px; margin: 0;  color: #DDDDDD; }
-#FOOTER a { 
-	font-size: 11px;	
-	font-weight: bold;	
-	text-decoration: none;  
-	color: White; 
-}
-#FOOTER a:hover { color: white; text-decoration: underline; }
 
+#FOOTER p {
+  margin-bottom: 11px;
+}
+
+/*    Tablet Layout: 768px.
+    Gutters: 24px.
+    Outer margins: 28px.
+    Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+/*@media only screen and (max-width: 991px) {*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+  body {
+    width: 712px;
+    padding: 24px 28px 60px;
+  }
+  #CONTENT {
+    width: 488px;
+    padding-left: 210px;
+  }
+  #illustration {
+    top: 350px;
+    width:210px;
+  }
+}
+
+
+
+/*    Mobile Layout: 320px.
+    Gutters: 24px.
+    Outer margins: 34px.
+    Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252*/
+
+@media only screen and (max-width: 767px) {
+  
+  body {
+    width: 290px;
+    padding: 48px 0px 60px;
+  }
+
+  #CONTENT {
+    padding-top: 22px;
+    clear: both;
+  }
+  
+  #HEADER ul {
+    position: static;
+    width: 68px;
+    float: right;
+    padding-right: 20px;
+  }
+  
+  #HEADER ul li {
+    line-height: 1.7em;
+  }
+  
+  #HEADER {
+    width: 256px;
+  }
+  
+  #HEADER h1 {
+    width: 140px;
+    position: relative;
+    top: -8px;
+    left: -15px;
+  }
+  
+  #HEADER img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #CONTENT, #FOOTER {
+    width: 290px;
+    padding-left: 0;
+  }
+  
+  .large, #CONTENT h2 {
+    font-size: 32px;
+    line-height: 1.2em;
+  }
+
+  .bigger, h3 {
+    font-size: 22px;
+    line-height: 1.4em;
+    font-weight: bold;
+  }
+
+  .big, h4 {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: bold;
+  }
+  #illustration {
+    dislpay: none;
+    visibility: hidden;
+  }
+}
+
+
+/*    Wide Mobile Layout: 480px.
+    Gutters: 24px.
+    Outer margins: 22px.
+    Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+  body {
+    width: 436px;
+    padding: 36px 22px 48px;
+  }
+  
+  #HEADER {
+    width: 160px;
+    height: 30px;
+  }
+  
+  #HEADER ul {
+    float: left;
+    padding-left: 20px;
+  }
+  #FOOTER {
+    width: 436px;
+  }
+    
+  #CONTENT {
+    padding-top: 0;
+    clear: none;
+    width: 252px;
+    padding-left: 160px;
+  }
+  #illustration {
+    visibility: visible;
+    display: block;
+    top: 300px;
+    width:180px;
+  }
+}
