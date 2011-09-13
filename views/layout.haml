@@ -1,49 +1,49 @@
-!!! 
+!!!
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
   %head
     %title Happy Nerds - Programming Links for Kids
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
     %meta{:name => "Description", :content => "Information and links regarding teaching programming to children."}
-        
+
     %meta{:name => "Keywords", :content => "children, kid, programming, coding, tutorials, agentsheets, alice, phrogram, robomind, sgp, scratch, simple, squeak, etoys, toontalk, logo, robomind" }
-    
+
     %link{:href => "/css/style.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Inconsolata", :rel => "stylesheet", :type => "text/css"}
   %body
     %div{:id => "HEADER"}
       %h1
         %a{:href => "/"}
-          %img{:src="/img/logo.png", :title => "Happy Nerds", :alt => "Happy Nerds"}
-      %ul 
-      %li 
+          %img{:src => "/img/logo.png", :title => "Happy Nerds", :alt => "Happy Nerds"}
+      %ul
+      %li
         %a{:href => '/'} Home
-        %li 
+        %li
           %a{:href => '/view/windows'} Windows
-          %li 
+          %li
             %a{:href => '/view/mac'} Mac
-        %li 
+        %li
           %a{:href => '/view/linux'} Linux
       .Visual
     %div{:id => "CONTENT"}
       %div{:id => "TEXT"}
         %h2 #{@page.capitalize}
         = yield
-      
+
     %div{:id => "FOOTER"}
       %p
-        This site is powered by 
-        %a{:href => "http://www.sinatrarb.com/"} Sinatra, 
-        %a{:href => "http://haml-lang.com/"} Haml, 
-        %a{:href => "http://heroku.com/"} Heroku 
-        and 
+        This site is powered by
+        %a{:href => "http://www.sinatrarb.com/"} Sinatra,
+        %a{:href => "http://haml-lang.com/"} Haml,
+        %a{:href => "http://heroku.com/"} Heroku
+        and
         %a{:href => "http://mongohq.com/"} MongoHQ.
-        It's 
-        %a{:href => "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.happynerds.net%2F&charset=%28detect+automatically%29&doctype=Inline&group=0"} valid XHTML 
-        and 
+        It's
+        %a{:href => "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.happynerds.net%2F&charset=%28detect+automatically%29&doctype=Inline&group=0"} valid XHTML
+        and
         %a{:href => "http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.happynerds.net%2Fcss%2Fstyle.css&profile=css21&usermedium=all&warning=1&lang=en"} CSS
       %p
-        &copy; 
-        %a{:href => "http://citizen428.net"} Michael Kohl 
+        &copy;
+        %a{:href => "http://citizen428.net"} Michael Kohl
         2009, original CSS by
         %a{:href => "http://fadr.at"} Fadr.at
     <script type="text/javascript">
