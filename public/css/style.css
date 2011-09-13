@@ -57,7 +57,7 @@ a img {border: 0;}
 }
 
 body {
-  font: 16px/24px Georgia, serif;
+  font: normal normal normal 16px/24px Georgia, serif;
 }
 
 .small, small {
@@ -131,7 +131,7 @@ body {
 #HEADER {
   height: 50px;
   width: 160px;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'Inconsolata', 'Lucida Grande', 'Lucida Sans', sans-serif;
   clear: both;
   position: relative;
 }
