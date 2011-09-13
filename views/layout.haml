@@ -8,18 +8,21 @@
     %meta{:name => "Keywords", :content => "children, kid, programming, coding, tutorials, agentsheets, alice, phrogram, robomind, sgp, scratch, simple, squeak, etoys, toontalk, logo, robomind" }
     
     %link{:href => "/css/style.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Inconsolata", :rel => "stylesheet", :type => "text/css"}
   %body
     %div{:id => "HEADER"}
-      %h1 Happy Nerds
+      %h1
+        %a{:href => "/"}
+          %img{:src="/img/logo.png", :title => "Happy Nerds", :alt => "Happy Nerds"}
       %ul 
+      %li 
+        %a{:href => '/'} Home
         %li 
-          %a{:href => '/view/linux'} Linux  
+          %a{:href => '/view/windows'} Windows
+          %li 
+            %a{:href => '/view/mac'} Mac
         %li 
-          %a{:href => '/view/mac'} Mac
-        %li 
-          %a{:href => '/view/windows'} Windows      
-        %li 
-          %a{:href => '/'} Home
+          %a{:href => '/view/linux'} Linux
       .Visual
     %div{:id => "CONTENT"}
       %div{:id => "TEXT"}
@@ -42,7 +45,7 @@
         &copy; 
         %a{:href => "http://citizen428.net"} Michael Kohl 
         2009, original CSS by
-        %a{:href => "http://www.gettemplate.com"} GetTemplate.com
+        %a{:href => "http://fadr.at"} Fadr.at
     <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
