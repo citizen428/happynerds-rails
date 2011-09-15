@@ -1,2 +1,3 @@
 mongo --version '>=0.18.1'
 mongo_ext
+newrelic_rpm

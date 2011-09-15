@@ -5,8 +5,8 @@ require 'mongo'
 
 configure :production do
   enable :raise_errors
+  require 'newrelic_rpm'
 end
-
 
 helpers do
   def protected!
