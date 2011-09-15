@@ -1,4 +1,4 @@
-- @sites.find( { 'tags' => @page } ).sort([['desc', 1]]).each do |site|
+- @sites.find({'tags' => @page}).sort([['desc', 1]]).each do |site|
   %a{:href => site['href']}#{site['desc']}
   %p #{site['long_desc']}
   %br/

@@ -1,0 +1,16 @@
+%form{:action => "/add", :method => "post"}
+  Name:
+  %input{:type => "text", :name => "desc", :class => "text"}
+  %br/
+  Tags:
+  %input{:type => "text", :name => "tags", :class => "text"}
+  %br/
+  URL:
+  %input{:type => "text", :name => "href", :class => "text"}
+  %br/
+  Description:
+  %textarea{:name => "long_desc"}
+  %br/
+  %input{:type => "submit", :value => "Send", :class => "button"}
+- if @result
+  %pre= @result
