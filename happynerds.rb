@@ -27,7 +27,7 @@ end
 
 include Mongo
 
-db = Connection.new(ENV['DATABASE_URL'], ENV['DATABASE_PORT']).db('happynerds')
+db = Connection.new(ENV['DATABASE_URL'], ENV['DATABASE_PORT'], :slave_ok => true).db('happynerds')
 if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
   auth = db.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
 end
