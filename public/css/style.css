@@ -7,12 +7,12 @@
 /*  Resets
   ------  */
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
-p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
-img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figure, figcaption, hgroup, 
+article, aside, canvas, details, figure, figcaption, hgroup,
 menu, footer, header, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@ body {
   line-height: 18px;
 }
 
-/*    Default Layout: 992px. 
+/*    Default Layout: 992px.
     Gutters: 24px.
     Outer margins: 48px.
     Leftover space for scrollbars @1024px: 32px.
@@ -140,6 +140,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0;
+  z-index:-1;
 }
 
 #HEADER h1 {
@@ -195,7 +196,7 @@ px      68    160    252    344    436    528    620    712    */
 
 /*@media only screen and (max-width: 991px) {*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  
+
   body {
     width: 712px;
     padding: 24px 28px 60px;
@@ -221,7 +222,7 @@ cols    1     2      3
 px      68    160    252*/
 
 @media only screen and (max-width: 767px) {
-  
+
   body {
     width: 290px;
     padding: 48px 0px 60px;
@@ -231,39 +232,39 @@ px      68    160    252*/
     padding-top: 22px;
     clear: both;
   }
-  
+
   #HEADER ul {
     position: static;
     width: 68px;
     float: right;
     padding-right: 20px;
   }
-  
+
   #HEADER ul li {
     line-height: 1.7em;
   }
-  
+
   #HEADER {
     width: 256px;
   }
-  
+
   #HEADER h1 {
     width: 140px;
     position: relative;
     top: -8px;
     left: -15px;
   }
-  
+
   #HEADER img {
     width: 100%;
     height: auto;
   }
-  
+
   #CONTENT, #FOOTER {
     width: 290px;
     padding-left: 0;
   }
-  
+
   .large, #CONTENT h2 {
     font-size: 32px;
     line-height: 1.2em;
@@ -280,8 +281,9 @@ px      68    160    252*/
     line-height: 1.4em;
     font-weight: bold;
   }
+
   #illustration {
-    dislpay: none;
+    display: none;
     visibility: hidden;
   }
 }
@@ -296,17 +298,17 @@ cols    1     2      3      4      5
 px      68    160    252    344    436    */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  
+
   body {
     width: 436px;
     padding: 36px 22px 48px;
   }
-  
+
   #HEADER {
     width: 160px;
     height: 30px;
   }
-  
+
   #HEADER ul {
     float: left;
     padding-left: 20px;
@@ -314,7 +316,7 @@ px      68    160    252    344    436    */
   #FOOTER {
     width: 436px;
   }
-    
+
   #CONTENT {
     padding-top: 0;
     clear: none;
@@ -326,5 +328,6 @@ px      68    160    252    344    436    */
     display: block;
     top: 300px;
     width:180px;
+    z-index:-1;
   }
 }
