@@ -25,12 +25,13 @@ helpers do
   end
 end
 
-include Mongo
+uri = URI.parse(ENV['MONGOHQ_URL'])
+conn = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
+db = conn.db(uri.path.gsub(/^\//, ''))
 
-db = Connection.new(ENV['DATABASE_URL'], ENV['DATABASE_PORT'], :slave_ok => true).db('happynerds')
-if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
-  auth = db.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
-end
+# if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
+#   auth = db.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
+# end
 
 get '/' do
   @page = "Programming for kids?"
