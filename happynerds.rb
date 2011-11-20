@@ -3,6 +3,8 @@ require 'sinatra'
 require 'haml'
 require 'mongo'
 
+set :haml, :format => :html5
+
 configure :production do
   enable :raise_errors
   require 'newrelic_rpm'
