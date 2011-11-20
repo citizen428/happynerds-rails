@@ -33,33 +33,19 @@
         = yield
 
     %div{:id => "FOOTER"}
-      %p
-        This site is powered by
-        %a{:href => "http://www.sinatrarb.com/"} Sinatra,
-        %a{:href => "http://heroku.com/"} Heroku
-        and
-        %a{:href => "http://mongohq.com/"} MongoHQ.
-        It's
-        %a{:href => "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.happynerds.net%2F&charset=%28detect+automatically%29&doctype=Inline&group=0"} valid HTML5
-        and mostly valid
-        %a{:href => "http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.happynerds.net%2Fcss%2Fstyle.css&profile=css21&usermedium=all&warning=1&lang=en"} CSS
-        = "."
-      %p
-        &copy;
-        %a{:href => "http://citizen428.net"} Michael Kohl
-        (
-        %a{:href => "http://twitter.com/citizen428"} @citzen428
-        )
-        2009, original CSS by
-        %a{:href => "http://fadr.at"} Fadr.at
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-    var pageTracker = _gat._getTracker("UA-1416057-3");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
+      :markdown
+        This site is powered by [Sinatra](http://www.sinatrarb.com), [Heroku](http://heroku.com) and [MongoHQ](http://mongohq.com). It's [valid HTML5](http://validator.w3.org/check?uri=http%3A%2F%2Fhappynerds.net%2F&charset=%28detect+automatically%29&doctype=Inline&group=0) and mostly valid [CSS3](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhappynerds.net%2Fcss%2Fstyle.css&profile=css3&usermedium=all&warning=1&lang=en).
+
+        &copy; [Michael Kohl](http://citizen428.net) ([@citizen428](http://twitter.com/citizen428))  2009, original CSS by [Fadr.at](http://fadr.at).
+
+        <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-1416057-3");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
 
 
