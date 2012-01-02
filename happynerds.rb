@@ -38,7 +38,7 @@ end
 
 get '/view/:os' do
   @page = params[:os]
-  redirect '/' unless %w(linux mac windows browser).include? @page
+  redirect '/' unless %w(linux mac windows browser books).include? @page
   @sites = db['sites']
 
   haml :os
