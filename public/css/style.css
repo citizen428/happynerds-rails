@@ -326,7 +326,7 @@ px      68    160    252    344    436    */
   #illustration {
     visibility: visible;
     display: block;
-    top: 300px;
+    top: 350px;
     width:180px;
     z-index:-1;
   }
