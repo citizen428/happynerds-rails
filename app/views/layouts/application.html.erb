@@ -20,34 +20,41 @@
         <a href="/">Home</a>
       </li>
       <li>
-        <a href="/view/windows">Windows</a>
+        <a href="<%= sites_path(type: 'windows') %>">Windows</a>
       </li>
       <li>
-        <a href="/view/mac">Mac</a>
+        <a href="<%= sites_path(type: 'mac') %>">Mac</a>
       </li>
       <li>
-        <a href="/view/linux">Linux</a>
+        <a href="<%= sites_path(type: 'linux') %>">Linux</a>
       </li>
       <li>
-        <a href="/view/browser">Browser</a>
+        <a href="<%= sites_path(type: 'browser') %>">Browser</a>
       </li>
       <li>
-        <a href="/view/ios">iOS</a>
+        <a href="<%= sites_path(type: 'ios') %>">iOS</a>
       </li>
       <li>
-        <a href="/view/raspberry">Raspberry Pi</a>
+        <a href="<%= sites_path(type: 'raspberry') %>">Raspberry Pi</a>
       </li>
       <li>
-        <a href="/view/books">Books</a>
+        <a href="<%= sites_path(type: 'books') %>">Books</a>
       </li>
       <li>
-        <a href="/view/meta">Meta</a>
+        <a href="<%= sites_path(type: 'meta') %>">Meta</a>
       </li>
     </ul>
   </nav>
 </header>
 <main>
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <%= content_tag :div, msg, :class => "flash_#{name}" %>
+    <% end %>
+  <% end %>
+
   <%= yield %>
+
   <%= image_tag('schneidersitz.png', id: 'illustration') %>
 </main>
 

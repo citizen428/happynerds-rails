@@ -1,0 +1,17 @@
+<%= form_for @site do |f| %>
+    <%= f.label :name %>:
+    <%= f.text_field :name %><br />
+
+    <%= f.label :description %>:
+    <%= f.text_area :description %><br />
+
+    <%= f.label :url %>:
+    <%= f.text_area :url %><br />
+
+    <% Site.used_tags.each do |tag| %>
+      <%= f.label tag %>
+      <%= f.check_box :tags, { multiple: true }, tag, nil %>
+    <% end %>
+
+    <%= f.submit %>
+<% end %>

@@ -8,4 +8,10 @@ class Site
 
   default_scope -> { order_by(name: :asc) }
   scope :tagged, ->(tag) { where(tags: tag) }
+
+  validates :name, :description, :url, :tags, presence: true
+
+  def self.used_tags
+    distinct(:tags)
+  end
 end
