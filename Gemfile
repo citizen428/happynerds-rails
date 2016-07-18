@@ -3,15 +3,17 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '5.0.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 # Style
 gem 'material_design_lite-rails'
+
+gem 'puma'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -19,8 +21,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # MongoDB
-gem 'mongoid', '~> 5.1.0'
-gem 'bson_ext'
+gem 'mongoid', '~> 6.0.0.beta'
 
 # Static pages
 gem 'high_voltage', '~> 3.0.0'
@@ -33,6 +34,6 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
 end
 
