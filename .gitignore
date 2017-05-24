@@ -14,3 +14,4 @@
 
 # Ignore IDE files
 .idea
+dump/
