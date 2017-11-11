@@ -4,26 +4,25 @@ class SitesController < ApplicationController
                                except: :index
 
   def index
-    @sites = Site.tagged(params[:type])
+    sites = Site.tagged(params[:type])
+    expose sites: sites, category: CategoryDecorator.new(params[:type])
   end
 
   def new
-    @site = Site.new
+    expose site: Site.new
   end
 
   def create
-    if (@site = Site.create(site_params))
-      flash[:notice] = "Successfully added #{site_params[:name]}"
+    if (site = Site.create(site_params))
+      flash[:notice] = "Successfully added #{site.name}"
       redirect_to root_path
     else
-      flash.now[:alert] = @site.errors.full_messages.to_sentence
-      render 'sites/new'
+      flash.now[:alert] = site.errors.full_messages.to_sentence
+      render 'sites/new', locals: site
     end
   end
 
-  protected
-
-  def site_params
+  private def site_params
     params.require(:site).permit(:name, :description, :url, tags: [])
   end
 end

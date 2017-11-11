@@ -11,7 +11,7 @@ class Site
 
   validates :name, :description, :url, :tags, presence: true
 
-  def self.used_tags
+  def self.all_tags
     distinct(:tags)
   end
 end

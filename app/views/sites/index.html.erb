@@ -1,8 +1,8 @@
-<h2><%= title_for(params[:type]) %></h2>
+<h2><%= category.name %></h2>
 
-<% @sites.sort([["name", 1]]).each do |site| %>
+<% sites.each do |site| %>
     <article>
-      <a href="<%= site['url'] %>"><%= site["name"] %></a>
-      <p><%= site["description"] %></p>
+      <a href="<%= site.url %>"><%= site.name %></a>
+      <p><%= site.description %></p>
     </article>
 <% end %>
