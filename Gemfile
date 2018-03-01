@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+# Only define Ruby version once (i.e. for Heroku)
+version_file = File.join(File.dirname(__FILE__), '.ruby-version')
+ruby File.read(version_file).strip
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -10,8 +12,6 @@ gem 'sass-rails'
 gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
-# Style
-gem 'material_design_lite-rails'
 
 gem 'puma'
 
