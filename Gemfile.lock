@@ -40,7 +40,6 @@ GEM
       tzinfo (~> 1.1)
     arel (8.0.0)
     bindex (0.5.0)
-    bson (4.3.0)
     builder (3.2.3)
     byebug (10.0.0)
     coderay (1.1.2)
@@ -79,11 +78,6 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    mongo (2.5.1)
-      bson (>= 4.3.0, < 5.0.0)
-    mongoid (6.0.3)
-      activemodel (~> 5.0)
-      mongo (~> 2.3)
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -172,7 +166,6 @@ DEPENDENCIES
   high_voltage (~> 3.0.0)
   jquery-rails
   lograge
-  mongoid (~> 6.0.0.beta)
   pg
   pry-rails
   puma
