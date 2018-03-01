@@ -10,8 +10,6 @@ gem 'rails'
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails'
 
 gem 'puma'
 
@@ -25,6 +23,8 @@ gem 'turbolinks'
 # Static pages
 gem 'high_voltage', '~> 3.0.0'
 gem 'lograge'
+
+gem 'administrate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
