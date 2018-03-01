@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CategoryDecorator
-  CATEGORY_MAPPINGS = { ios: "iOS", raspberry: "Raspberry Pi"}
+  CATEGORY_MAPPINGS = { ios: 'iOS', raspberry: 'Raspberry Pi' }.freeze
 
   def initialize(name)
     @name = name

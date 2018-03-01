@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SitesController < ApplicationController
   http_basic_authenticate_with name: Rails.application.secrets.admin_user,
                                password: Rails.application.secrets.admin_pw,
