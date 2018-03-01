@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CategoryLink < ApplicationRecord
+class CategorySite < ApplicationRecord
   belongs_to :category
-  belongs_to :link
+  belongs_to :site
 end

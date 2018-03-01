@@ -1,19 +1,10 @@
 # frozen_string_literal: true
 
-class Site
-  include Mongoid::Document
+class Site < ApplicationRecord
+  has_many :category_sites
+  has_many :categories, through: :category_sites
 
-  field :name, type: String
-  field :description, type: String
-  field :url, type: String
-  field :tags, type: Array
+  validates :name, :description, :url, presence: true
 
-  default_scope -> { order_by(name: :asc) }
-  scope :tagged, ->(tag) { where(tags: tag) }
-
-  validates :name, :description, :url, :tags, presence: true
-
-  def self.all_tags
-    distinct(:tags)
-  end
+  default_scope { order(name: :asc) }
 end

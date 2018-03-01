@@ -1,0 +1,36 @@
+<header>
+  <a href="/">
+    <%= image_tag('logo.png') %>
+  </a>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'windows') %>">Windows</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'mac') %>">Mac</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'linux') %>">Linux</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'browser') %>">Browser</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'ios') %>">iOS</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'raspberry') %>">Raspberry Pi</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'books') %>">Books</a>
+      </li>
+      <li>
+        <a href="<%= sites_path(type: 'meta') %>">Meta</a>
+      </li>
+    </ul>
+  </nav>
+</header>

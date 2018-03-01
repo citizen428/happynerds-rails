@@ -1,81 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Happy Nerds - Programming Links for Kids</title>
-  <meta content="Information and links regarding teaching programming to children." name="Description">
-  <meta content="children, kid, programming, coding, tutorials, agentsheets, alice, phrogram, robomind, sgp, scratch, simple, squeak, etoys, toontalk, logo, robomind" name="Keywords">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>
-  <a href="/">
-    <%= image_tag('logo.png') %>
-  </a>
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'windows') %>">Windows</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'mac') %>">Mac</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'linux') %>">Linux</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'browser') %>">Browser</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'ios') %>">iOS</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'raspberry') %>">Raspberry Pi</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'books') %>">Books</a>
-      </li>
-      <li>
-        <a href="<%= sites_path(type: 'meta') %>">Meta</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <% flash.each do |name, msg| %>
-    <% if msg.is_a?(String) %>
-      <%= content_tag :div, msg, :class => "flash_#{name}" %>
-    <% end %>
-  <% end %>
+  <head>
+    <%= csrf_meta_tags %>
 
-  <%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-  <%= image_tag('schneidersitz.png', id: 'illustration') %>
-</main>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta content="Information and links regarding teaching programming to children." name="Description">
+    <meta content="children, kid, programming, coding, tutorials, agentsheets, alice, phrogram, robomind, sgp, scratch, simple, squeak, etoys, toontalk, logo, robomind" name="Keywords">
 
-<footer>
-  <p>This site is powered by <a href="http://rubyonrails.org/">Rails</a>, <a href="http://heroku.com">Heroku</a> and <a href="https://mongolab.com">MongoLab</a>.</p>
+    <title>Happy Nerds - Programming Links for Kids</title>
+  </head>
 
-  <p>&copy; <a href="http://citizen428.net">Michael Kohl</a> (<a href="http://twitter.com/citizen428">@citizen428</a>) 2009-2016, original CSS by <a href="http://fadr.at">Fadrat</a>.</p>
+  <body>
+    <%= render partial: 'layouts/google_analytics' %>
+    <%= render partial: 'layouts/nav' %>
+    <main>
+      <%= yield %>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src="" + gaJsHost + "google-analytics.com/ga.js" type="text/javascript"%3E%3C/script%3E"));
-  </script>
+      <%= image_tag('schneidersitz.png', id: 'illustration') %>
+    </main>
 
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-1416057-3");
-      pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
-</footer>
-</body>
+    <footer>
+      <p>&copy; <a href="http://citizen428.net">Michael Kohl</a> (<a href="http://twitter.com/citizen428">@citizen428</a>) 2009-2018, CSS by <a href="http://fadr.at">Fadrat</a>.</p>
+
+      <script async type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
+    </footer>
+  </body>
 </htmL>

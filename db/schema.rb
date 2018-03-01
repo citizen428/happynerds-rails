@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301042103) do
+ActiveRecord::Schema.define(version: 20180301054716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20180301042103) do
     t.string "name", null: false
   end
 
-  create_table "category_links", force: :cascade do |t|
+  create_table "category_sites", force: :cascade do |t|
     t.bigint "category_id"
-    t.bigint "link_id"
-    t.index ["category_id"], name: "index_category_links_on_category_id"
-    t.index ["link_id"], name: "index_category_links_on_link_id"
+    t.bigint "site_id"
+    t.index ["category_id"], name: "index_category_sites_on_category_id"
+    t.index ["site_id"], name: "index_category_sites_on_site_id"
   end
 
-  create_table "links", force: :cascade do |t|
+  create_table "sites", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
     t.string "url", null: false

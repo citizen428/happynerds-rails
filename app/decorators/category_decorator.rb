@@ -3,8 +3,8 @@
 class CategoryDecorator
   CATEGORY_MAPPINGS = { ios: 'iOS', raspberry: 'Raspberry Pi' }.freeze
 
-  def initialize(name)
-    @name = name
+  def initialize(category)
+    @name = category.name
   end
 
   def name
