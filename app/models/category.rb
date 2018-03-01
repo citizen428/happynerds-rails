@@ -1,11 +1,6 @@
-class Category
-  CATEGORY_MAPPINGS = { ios: "iOS", raspberry: "Raspberry Pi"}
+class Category < ApplicationRecord
+  has_many :category_links
+  has_many :links, through: :category_links
 
-  def initialize(name)
-    @name = name
-  end
-
-  def name
-    CATEGORY_MAPPINGS.fetch(@name.to_sym) { @name.capitalize }
-  end
+  validates :name, presence: true
 end

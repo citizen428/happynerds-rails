@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   # TODO: Change database name
-  database: rails_new_development
+  database: happynerds_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -59,7 +59,7 @@ development:
 test:
   <<: *default
   # TODO: Change database name
-  database: rails_new_test
+  database: happynerds_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
